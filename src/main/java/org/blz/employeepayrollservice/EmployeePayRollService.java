@@ -69,4 +69,15 @@ public class EmployeePayRollService {
         }
         return entries;
     }
+    public void printData()
+    {
+        try
+        {
+            Files.lines(Paths.get(FILE_PATH)).forEach(System.out::println);
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
